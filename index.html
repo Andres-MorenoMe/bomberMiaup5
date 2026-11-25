@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.2/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+<!-- index.html -->
+<!-- Load p5.js first (required by p5.quadrille.js, latest version) -->
+<script src="https://cdn.jsdelivr.net/npm/p5/lib/p5.min.js"></script>
+<!-- Load p5.quadrille.js (latest stable version) -->
+<script src="https://cdn.jsdelivr.net/npm/p5.quadrille/dist/p5.quadrille.min.js"></script>
+<script>
+  let q // Step 1: Declare
+
+  function setup() {
+    createCanvas(600, 400)
+    q = createQuadrille(6, 4, 10, '🐲') // Step 2: Create
+  }
+
+  function draw() {
+    background(0)
+    drawQuadrille(q) // Step 3: Render
+  }
+
+  function mousePressed() {
+    q.randomize() // Step 4: Interact
+  }
+</script>    
+    
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
